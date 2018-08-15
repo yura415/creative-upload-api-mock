@@ -1,0 +1,20 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ],
+  "plugins": [
+    "add-module-exports",
+    [
+      "module-resolver", {
+        "root": ["./src"],
+        "alias": {
+          "test": "./test"
+        }
+      }
+    ]
+  ]
+}
