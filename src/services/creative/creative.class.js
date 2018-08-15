@@ -10,10 +10,10 @@ class CreativeService extends Service {
 		data.width = parseInt(data.width)
 		data.height = parseInt(data.height)
 
-		if (typeof data.width !== 'number') {
+		if (isNaN(data.width)) {
 			throw new BadRequest('data.width is not a number')
 		}
-		if (typeof data.height !== 'number') {
+		if (isNaN(data.height)) {
 			throw new BadRequest('data.height is not a number')
 		}
 
